@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./input.css -o ./css/main.css",
-    "watch": "tailwindcss -i ./input.css -o ./css/main.css --watch"
+    "build": "tailwindcss -i ./test.css -o ./css/main.css",
+    "watch": "tailwindcss -i ./test.css -o ./css/main.css --watch",
+    "buildtest": "tailwindcss -i ./inputtest.css -o ./css/test.css",
+    "watchtest": "tailwindcss -i ./inputtest.css -o ./css/test.css --watch"
   },
   "keywords": [],
   "author": "",
