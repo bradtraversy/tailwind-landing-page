@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/slick-theme.css" />
+    <link rel="icon" href="https://freefrontend.com/favicon.ico" />
     <title>Manage Landing Page</title>
   </head>
   <body>
@@ -18,11 +21,12 @@
         </div>
         <!-- Menu Items -->
         <div class="hidden space-x-6 md:flex">
-          <a href="#" class="hover:text-darkGrayishBlue">Pricing</a>
-          <a href="#" class="hover:text-darkGrayishBlue">Product</a>
-          <a href="#" class="hover:text-darkGrayishBlue">About Us</a>
-          <a href="#" class="hover:text-darkGrayishBlue">Careers</a>
-          <a href="#" class="hover:text-darkGrayishBlue">Community</a>
+          <a href="#hero" class="hover:text-darkGrayishBlue">Home</a>
+          <a href="#features" class="hover:text-darkGrayishBlue">Features</a>
+          <a href="#testimonials" class="hover:text-darkGrayishBlue"
+            >Testimonials</a
+          >
+          <a href="#cta" class="hover:text-darkGrayishBlue">CTA</a>
         </div>
         <!-- Button -->
         <a
@@ -48,11 +52,10 @@
           id="menu"
           class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
         >
-          <a href="#">Pricing</a>
-          <a href="#">Product</a>
-          <a href="#">About Us</a>
-          <a href="#">Careers</a>
-          <a href="#">Community</a>
+          <a href="#hero">Home</a>
+          <a href="#features">Features</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#cta">CTA</a>
         </div>
       </div>
     </nav>
@@ -133,7 +136,7 @@
               </h3>
               <p class="text-darkGrayishBlue">
                 See how your day-to-day tasks fit into the wider vision. Go from
-              tracking progress at the milestone level all the way down to the
+                tracking progress at the milestone level all the way down to the
                 smallest of details. Never lose sight of the bigger picture
                 again.
               </p>
@@ -212,46 +215,91 @@
           What's Different About Manage?
         </h2>
         <!-- Testimonials Container -->
-        <div class="flex flex-col mt-24 md:flex-row md:space-x-6">
-          <!-- Testimonial 1 -->
-          <div
-            class="flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3"
-          >
-            <img src="img/avatar-anisha.png" class="w-16 -mt-14" alt="" />
-            <h5 class="text-lg font-bold">Anisha Li</h5>
-            <p class="text-sm text-darkGrayishBlue">
-              “Manage has supercharged our team’s workflow. The ability to
-              maintain visibility on larger milestones at all times keeps
-              everyone motivated.”
-            </p>
-          </div>
 
-          <!-- Testimonial 2 -->
-          <div
-            class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:flex md:w-1/3"
-          >
-            <img src="img/avatar-ali.png" class="w-16 -mt-14" alt="" />
-            <h5 class="text-lg font-bold">Ali Bravo</h5>
-            <p class="text-sm text-darkGrayishBlue">
-              “We have been able to cancel so many other subscriptions since
-              using Manage. There is no more cross-channel confusion and
-              everyone is much more focused.”
-            </p>
-          </div>
+        <div class="flex flex-col mt-24 justify-center items-center">
+          <div class="container">
+            <div class="testimonials slider">
+              <!-- Testimonial 1 -->
+              <div
+                class="!flex flex-col items-center justify-center p-6 space-y-6 rounded-lg bg-veryLightGray slide m-2"
+              >
+                <img src="img/avatar-anisha.png" class="w-16" alt="" />
+                <h5 class="text-lg font-bold">Anisha Li</h5>
+                <p class="text-sm text-darkGrayishBlue">
+                  “Manage has supercharged our team’s workflow. The ability to
+                  maintain visibility on larger milestones at all times keeps
+                  everyone motivated.”
+                </p>
+              </div>
 
-          <!-- Testimonial 3 -->
-          <div
-            class="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:flex md:w-1/3"
-          >
-            <img src="img/avatar-richard.png" class="w-16 -mt-14" alt="" />
-            <h5 class="text-lg font-bold">Richard Watts</h5>
-            <p class="text-sm text-darkGrayishBlue">
-              “Manage has supercharged our team’s workflow. The ability to
-              maintain visibility on larger milestones at all times keeps
-              everyone motivated.”
-            </p>
+              <!-- Testimonial 2 -->
+              <div
+                class="!flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray slide m-2"
+              >
+                <img src="img/avatar-ali.png" class="w-16" alt="" />
+                <h5 class="text-lg font-bold">Ali Bravo</h5>
+                <p class="text-sm text-darkGrayishBlue">
+                  “Manage has supercharged our team’s workflow. The ability to
+                  maintain visibility on larger milestones at all times keeps
+                  everyone motivated.”
+                </p>
+              </div>
+
+              <!-- Testimonial 3 -->
+              <div
+                class="!flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray slide m-2"
+              >
+                <img src="img/avatar-richard.png" class="w-16" alt="" />
+                <h5 class="text-lg font-bold">Richard Watts</h5>
+                <p class="text-sm text-darkGrayishBlue">
+                  “Manage has supercharged our team’s workflow. The ability to
+                  maintain visibility on larger milestones at all times keeps
+                  everyone motivated.”
+                </p>
+              </div>
+
+              <!-- Testimonial 4 -->
+              <div
+                class="!flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray slide m-2"
+              >
+                <img src="img/avatar-richard.png" class="w-16" alt="" />
+                <h5 class="text-lg font-bold">Richard Watts</h5>
+                <p class="text-sm text-darkGrayishBlue">
+                  “Manage has supercharged our team’s workflow. The ability to
+                  maintain visibility on larger milestones at all times keeps
+                  everyone motivated.”
+                </p>
+              </div>
+
+              <!-- Testimonial 5 -->
+              <div
+                class="!flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray slide m-2"
+              >
+                <img src="img/avatar-richard.png" class="w-16" alt="" />
+                <h5 class="text-lg font-bold">Richard Watts</h5>
+                <p class="text-sm text-darkGrayishBlue">
+                  “Manage has supercharged our team’s workflow. The ability to
+                  maintain visibility on larger milestones at all times keeps
+                  everyone motivated.”
+                </p>
+              </div>
+
+              <!-- Testimonial 6 -->
+              <div
+                class="!flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray slide m-2"
+              >
+                <img src="img/avatar-richard.png" class="w-16" alt="" />
+                <h5 class="text-lg font-bold">Richard Watts</h5>
+                <p class="text-sm text-darkGrayishBlue">
+                  “Manage has supercharged our team’s workflow. The ability to
+                  maintain visibility on larger milestones at all times keeps
+                  everyone motivated.”
+                </p>
+              </div>
+            </div>
           </div>
         </div>
+
         <!-- Button -->
         <div class="my-16">
           <a
@@ -330,9 +378,11 @@
         <!-- List Container -->
         <div class="flex justify-around space-x-32">
           <div class="flex flex-col space-y-3 text-white">
-            <a href="#" class="hover:text-brightRed">Home</a>
-            <a href="#" class="hover:text-brightRed">Pricing</a>
-            <a href="#" class="hover:text-brightRed">Products</a>
+            <a href="#hero" class="hover:text-brightRed">Home</a>
+            <a href="#features" class="hover:text-brightRed">Features</a>
+            <a href="#testimonials" class="hover:text-brightRed"
+              >testimonials</a
+            >
             <a href="#" class="hover:text-brightRed">About</a>
           </div>
           <div class="flex flex-col space-y-3 text-white">
@@ -365,6 +415,8 @@
       </div>
     </footer>
 
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
